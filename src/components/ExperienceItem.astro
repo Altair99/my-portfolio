@@ -1,0 +1,28 @@
+---
+import CircleIcon from '../components/icons/CircleIcon.astro';
+
+interface Props {
+    title: string
+    company: string
+    description: string
+    link: string
+    date: string
+}
+
+const { title, company, description, link, date } = Astro.props
+---
+<span class="-left-[12px] absolute pt-4">
+    <CircleIcon class="size-6 text-green-600" />
+</span>
+<h3 class="flex items-center mb-1 text-lg font-bold text-green-600">
+    {title}
+</h3>
+<h4 class="flex items-center mb-1 text-md font-semibold dark:text-white">
+    {company}
+</h4>
+<time class="block mb-2 text-sm font-normal leading-none dark:text-gray-500">
+    {date}
+</time>
+<p class="mb-4 text-base font-normal dark:text-gray-400">
+    {description}
+</p>

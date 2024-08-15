@@ -1,0 +1,98 @@
+---
+import AstroIcon from './icons/AstroIcon.astro'
+import AzureIcon from './icons/AzureIcon.astro'
+import FlutterIcon from './icons/FlutterIcon.astro'
+import UnityIcon from './icons/UnityIcon.astro'
+import UnrealIcon from './icons/UnrealIcon.astro'
+
+const TECHNOLOGY = {
+  UNITY: {
+    name: "Unity",
+    class: "bg-black text-white",
+    icon: UnityIcon,
+  },
+  UNREAL: {
+    name: "Unreal",
+    class: "bg-[#003159] text-white",
+    icon: UnrealIcon,
+  },
+  FLUTTER: {
+    name: "Flutter",
+    class: "bg-[#003159] text-white",
+    icon: FlutterIcon,
+  },
+  AZURE: {
+    name: "Azure",
+    class: "bg-[#003159] text-white",
+    icon: AzureIcon,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#003159] text-white",
+    icon: AstroIcon,
+  },
+}
+
+const PLATFORMS = {
+  NINTENDO: {
+    name: "Nintendo",
+    class: "bg-black text-white",
+    //icon: Nintendo,
+  },
+  XBOX: {
+    name: "Xbox",
+    class: "bg-[#003159] text-white",
+    // icon: Xbox,
+  },
+  PLAYSTATION: {
+    name: "PlayStation",
+    class: "bg-[#003159] text-white",
+    // icon: PlayStation,
+  },
+  STEAM: {
+    name: "Steam",
+    class: "bg-[#003159] text-white",
+    // icon: Steam,
+  },
+}
+
+const PROJECTS = [
+    {
+        game: "Pato Box",
+        imagePath: "Bromio",
+        description: "Id proident sunt proident veniam cupidatat labore et aute magna fugiat enim id do id. Mollit aliquip reprehenderit aliquip ex ea ut amet aute. Duis occaecat voluptate duis id qui aute Lorem esse amet reprehenderit sit quis. Exercitation dolore voluptate ut sint excepteur commodo ad officia ullamco. Lorem laborum nisi cupidatat minim pariatur consequat. Est nisi elit sunt sint occaecat mollit fugiat amet ut ipsum. Nostrud do laborum ea aliqua labore irure adipisicing culpa ut laboris eiusmod.",
+        link: "https://bromio.com.mx",
+        platforms: [PLATFORMS.STEAM, PLATFORMS.PLAYSTATION, PLATFORMS.XBOX, PLATFORMS.NINTENDO],
+        technologies: [TECHNOLOGY.UNITY],
+        work: "Development",
+    },
+    {
+        game: "Remnants of the Rift",
+        imagePath: "Colores de México",
+        description: "Qui irure incididunt adipisicing minim. Amet dolore irure incididunt labore eiusmod irure. Voluptate adipisicing est irure id. Consequat nisi aute adipisicing dolore velit laboris minim labore. Ullamco culpa anim enim Lorem qui excepteur commodo enim deserunt consectetur amet esse ea dolore. Fugiat pariatur officia consectetur consectetur fugiat laborum nostrud. Mollit pariatur laborum nisi eiusmod laboris.",
+        link: "https://coloresb2b.mx",
+        platforms: [PLATFORMS.STEAM],
+        technologies: [TECHNOLOGY.UNITY],
+        work: "Development"
+    },
+    {
+        game: "El Paso, Elsewhere",
+        imagePath: "",
+        description: "Qui irure incididunt adipisicing minim. Amet dolore irure incididunt labore eiusmod irure. Voluptate adipisicing est irure id. Consequat nisi aute adipisicing dolore velit laboris minim labore. Ullamco culpa anim enim Lorem qui excepteur commodo enim deserunt consectetur amet esse ea dolore. Fugiat pariatur officia consectetur consectetur fugiat laborum nostrud. Mollit pariatur laborum nisi eiusmod laboris.",
+        link: "https://coloresb2b.mx",
+        platforms: [PLATFORMS.XBOX],
+        technologies: [TECHNOLOGY.UNITY],
+        work: "Porting"
+    },
+]
+---
+
+<ol class="relative border-s border-yellow-600">         
+    {         
+        PROJECTS.map((project) => (
+        <div>       
+        </div>
+        ))
+    }
+</ol>
+

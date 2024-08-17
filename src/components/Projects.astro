@@ -2,6 +2,10 @@
 import AstroIcon from './icons/AstroIcon.astro'
 import AzureIcon from './icons/AzureIcon.astro'
 import FlutterIcon from './icons/FlutterIcon.astro'
+import NintendoIcon from './icons/platforms/NintendoIcon.astro'
+import PlayStationIcon from './icons/platforms/PlayStationIcon.astro'
+import SteamIcon from './icons/platforms/SteamIcon.astro'
+import XboxIcon from './icons/platforms/XboxIcon.astro'
 import UnityIcon from './icons/UnityIcon.astro'
 import UnrealIcon from './icons/UnrealIcon.astro'
 
@@ -37,29 +41,30 @@ const PLATFORMS = {
   NINTENDO: {
     name: "Nintendo",
     class: "bg-black text-white",
-    //icon: Nintendo,
+    icon: NintendoIcon,
   },
   XBOX: {
     name: "Xbox",
     class: "bg-[#003159] text-white",
-    // icon: Xbox,
+    icon: XboxIcon,
   },
   PLAYSTATION: {
     name: "PlayStation",
     class: "bg-[#003159] text-white",
-    // icon: PlayStation,
+    icon: PlayStationIcon,
   },
   STEAM: {
     name: "Steam",
     class: "bg-[#003159] text-white",
-    // icon: Steam,
+    icon: SteamIcon,
   },
 }
 
 const PROJECTS = [
     {
         game: "Pato Box",
-        imagePath: "Bromio",
+        imagePath: "/projects/patobox-logo.webp",
+        alt: "",
         description: "Id proident sunt proident veniam cupidatat labore et aute magna fugiat enim id do id. Mollit aliquip reprehenderit aliquip ex ea ut amet aute. Duis occaecat voluptate duis id qui aute Lorem esse amet reprehenderit sit quis. Exercitation dolore voluptate ut sint excepteur commodo ad officia ullamco. Lorem laborum nisi cupidatat minim pariatur consequat. Est nisi elit sunt sint occaecat mollit fugiat amet ut ipsum. Nostrud do laborum ea aliqua labore irure adipisicing culpa ut laboris eiusmod.",
         link: "https://bromio.com.mx",
         platforms: [PLATFORMS.STEAM, PLATFORMS.PLAYSTATION, PLATFORMS.XBOX, PLATFORMS.NINTENDO],
@@ -68,31 +73,57 @@ const PROJECTS = [
     },
     {
         game: "Remnants of the Rift",
-        imagePath: "Colores de México",
+        imagePath: "/projects/patobox-logo.webp",
+        alt: "",
         description: "Qui irure incididunt adipisicing minim. Amet dolore irure incididunt labore eiusmod irure. Voluptate adipisicing est irure id. Consequat nisi aute adipisicing dolore velit laboris minim labore. Ullamco culpa anim enim Lorem qui excepteur commodo enim deserunt consectetur amet esse ea dolore. Fugiat pariatur officia consectetur consectetur fugiat laborum nostrud. Mollit pariatur laborum nisi eiusmod laboris.",
         link: "https://coloresb2b.mx",
         platforms: [PLATFORMS.STEAM],
         technologies: [TECHNOLOGY.UNITY],
-        work: "Development"
+        work: "Development",
     },
     {
         game: "El Paso, Elsewhere",
-        imagePath: "",
+        imagePath: "/projects/patobox-logo.webp",
+        alt: "",
         description: "Qui irure incididunt adipisicing minim. Amet dolore irure incididunt labore eiusmod irure. Voluptate adipisicing est irure id. Consequat nisi aute adipisicing dolore velit laboris minim labore. Ullamco culpa anim enim Lorem qui excepteur commodo enim deserunt consectetur amet esse ea dolore. Fugiat pariatur officia consectetur consectetur fugiat laborum nostrud. Mollit pariatur laborum nisi eiusmod laboris.",
         link: "https://coloresb2b.mx",
         platforms: [PLATFORMS.XBOX],
         technologies: [TECHNOLOGY.UNITY],
-        work: "Porting"
+        work: "Porting",
     },
 ]
----
 
-<ol class="relative border-s border-yellow-600">         
-    {         
-        PROJECTS.map((project) => (
-        <div>       
-        </div>
-        ))
+---
+<div class="flex flex-col gap-y-16">
+    {      
+      PROJECTS.map((project) => (        
+        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+          <div class="w-full md:w-1/2">
+            <div class="flex flex-col items-center col-span-6 row-span-5 gap-8 rounded-xl overflow-hidden bg-cover bg-no-repeat">
+              <img alt={project.alt} class="scale-110 transition duration-700 ease-in-out hover:scale-100"  loading="lazy" src={project.imagePath} />
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="flex flex-row justify-between">
+              <h3 class="text-2xl font-bold">{project.game}</h3>
+              <div>
+                <p>{project.work}</p>
+                <div class="flex flex-row gap-1 justify-end">
+                  {
+                    project.platforms.map((platform) => (
+                    <platform.icon />
+                  ))
+                  }
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap mt-2">
+              <p class="text-sm">{project.description}</p>
+            </div>
+          </div>
+        </article>
+      ))
     }
-</ol>
+</div>
+
 

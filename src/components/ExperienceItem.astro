@@ -5,11 +5,10 @@ interface Props {
     title: string
     company: string
     description: string
-    link: string
     date: string
 }
 
-const { title, company, description, link, date } = Astro.props
+const { title, company, description, date } = Astro.props
 ---
 <span class="-left-[12px] absolute pt-4">
     <CircleIcon class="size-6 text-green-600" />

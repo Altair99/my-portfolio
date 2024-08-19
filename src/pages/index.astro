@@ -1,4 +1,5 @@
 ---
+import AboutMe from '../components/AboutMe.astro';
 import Container from '../components/Container.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/Projects.astro';
@@ -6,10 +7,13 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Luis Vera | Developer">
-    <Container class="pt-52 md:pt-48" title = "Experience">
+    <Container id="about-me" class="pt-52 md:pt-48" title = "About Me">
+        <AboutMe />
+    </Container>
+    <Container id="experience"  class="pt-16 md:pt-12" title = "Experience">
         <Experience />
     </Container>
-    <Container class="pt-16 md:pt-12" title = "Projects">
+    <Container id="projects" class="pt-16 md:pt-12" title = "Projects">
         <Projects />
     </Container>
 </Layout>

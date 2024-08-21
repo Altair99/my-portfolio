@@ -11,17 +11,17 @@ interface Props {
 const { title, company, description, date } = Astro.props
 ---
 <span class="-left-[12px] absolute pt-4">
-    <CircleIcon class="size-6 text-green-600" />
+    <CircleIcon class="size-6 text-cyan-500" />
 </span>
-<h3 class="flex items-center mb-1 text-lg font-bold text-green-600">
+<h3 class="flex items-center mb-1 text-lg font-bold text-cyan-500">
     {title}
 </h3>
-<h4 class="flex items-center mb-1 text-md font-semibold dark:text-white">
+<h4 class="flex items-center mb-1 text-md font-semibold text-white">
     {company}
 </h4>
-<time class="block mb-2 text-sm font-normal leading-none dark:text-gray-500">
+<time class="block mb-2 text-sm font-normal leading-none text-gray-500">
     {date}
 </time>
-<p class="mb-4 text-base font-normal dark:text-gray-400">
+<p class="mb-4 text-base font-normal text-gray-400">
     {description}
 </p>

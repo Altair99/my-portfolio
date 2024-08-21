@@ -1,44 +1,40 @@
 ---
-import AstroIcon from './icons/techs/AstroIcon.astro'
-import AzureIcon from './icons/techs/AzureIcon.astro'
-import FlutterIcon from './icons/techs/FlutterIcon.astro'
 import NintendoIcon from './icons/platforms/NintendoIcon.astro'
 import PlayStationIcon from './icons/platforms/PlayStationIcon.astro'
 import SteamIcon from './icons/platforms/SteamIcon.astro'
 import XboxIcon from './icons/platforms/XboxIcon.astro'
-import UnityIcon from './icons/techs/UnityIcon.astro'
-import UnrealIcon from './icons/techs/UnrealIcon.astro'
+
 
 const technologies = {
   UNITY: {
     name: "Unity",
     class: "bg-black text-white",
-    icon: UnityIcon,
+    // icon: UnityIcon,
   },
   UNREAL: {
     name: "Unreal",
     class: "bg-[#003159] text-white",
-    icon: UnrealIcon,
+    // icon: UnrealIcon,
   },
   GAMEMAKER: {
     name: "GameMaker",
     class: "bg-black text-white",
-    icon: UnityIcon,
+    // icon: UnityIcon,
   },
   FLUTTER: {
     name: "Flutter",
     class: "bg-[#003159] text-white",
-    icon: FlutterIcon,
+    // icon: FlutterIcon,
   },
   AZURE: {
     name: "Azure",
     class: "bg-[#003159] text-white",
-    icon: AzureIcon,
+    // icon: AzureIcon,
   },
   ASTRO: {
     name: "Astro",
     class: "bg-[#003159] text-white",
-    icon: AstroIcon,
+    // icon: AstroIcon,
   },
 }
 
@@ -145,18 +141,18 @@ const projects = [
             <div class="flex flex-row justify-between">
               <h3 class="text-2xl font-bold">{project.game}</h3>
               <div class="flex flex-col gap-1 justify-end">
-                <p class="text-right">{project.work}</p>
+                <p class="text-right text-gray-400">{project.work}</p>
                 <div class="flex flex-row gap-1 justify-end">
                   {
                     project.platforms.map((platform) => (
-                    <platform.icon />
+                    <platform.icon class="text-gray-400" />
                   ))
                   }
                 </div>
               </div>
             </div>
             <div class="flex flex-wrap mt-2">
-              <p class="text-base">{project.description}</p>
+              <p class="text-base text-gray-400">{project.description}</p>
             </div>
           </div>
         </article>

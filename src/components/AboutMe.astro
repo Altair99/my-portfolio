@@ -1,7 +1,16 @@
 ---
-
+const { class: className, id} = Astro.props
+const aboutMe = "A versatile programmer with a strong background in game development and porting, I have extensive experience in creating and optimizing games across multiple platforms. My adaptability allows me to switch seamlessly between languages and technologies as needed. Additionally, I have experience as a full-stack developer, contributing to both web and app development projects."
 ---
 
-<article>
-    Acerca de mi
+<article id={id} class={`${className} md:max-w-4xl px-4 w-full mx-auto`}>
+    <div class="flex flex-col-reverse md:flex-row justify-start items-center gap-8">
+        <div class="md:w-1/2">
+            <h1 class="text-4xl">Hi, I'm <span class="font-bold">Luis Vera</span></h1>
+            <p class="text-base pt-4">{aboutMe}</p>
+        </div>
+        <div class="w-1/4">
+            <img class="rounded-3xl rotate-2 shadow-lg shadow-gray-800 skew-y-6" alt="" src="me_ai.webp">
+        </div>
+    </div>
 </article>

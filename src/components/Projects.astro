@@ -90,6 +90,14 @@ const projects = [
         work: "Porting",
     },
     {
+        game: "Dilemo",
+        imagePath: "projects/dilemo-logo.webp",
+        alt: "Image from Dilemo by Pictoline Games",
+        description: "Enjoy Pictoline's trivia game with more fun and predicaments from across the multiverse! HEX is an interdimensional being that travels from universe to universe in search of people who can distinguish true from false. Are you one of them? Demonstrate your knowledge in different categories, answering cards that will test what you know about your favorite topics. Are you the series and movie expert among your group of friends? The one passionate about history? The best in geography, in science or in general culture? The universe needs you!",
+        technologies: [technologies.UNITY],
+        work: "Backend for News Feature",
+    },
+    {
         game: "Aragami 2",
         imagePath: "projects/aragami2-logo.webp",
         alt: "Image from Aragami 2 from Lince Works",
@@ -143,7 +151,7 @@ const projects = [
               <div class="flex flex-col gap-1 justify-end">
                 <p class="text-right text-gray-400">{project.work}</p>
                 <div class="flex flex-row gap-1 justify-end">
-                  {
+                  {project.platforms &&
                     project.platforms.map((platform) => (
                     <platform.icon class="text-gray-400" />
                   ))
